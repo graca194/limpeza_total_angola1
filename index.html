@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpeza Total Angola - Lavagem Profissional de Estofados</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef8ff',
+                            100: '#d9f0ff',
+                            500: '#0070f3',
+                            600: '#0051b3',
+                            700: '#003d8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and sleek app mock styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5c5c5;
+            border-radius: 4px;
+        }
+        .phone-frame {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 12px #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Bar & View Switcher -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-tr from-brand-600 to-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-soap text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-brand-700 to-emerald-600 bg-clip-text text-transparent">Limpeza Total</span>
+                    <span class="block text-xs font-semibold text-emerald-600 uppercase tracking-widest">Angola 🇦🇴</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#inicio" class="hover:text-brand-600 transition">Início</a>
+                <a href="#servicos" class="hover:text-brand-600 transition">Serviços</a>
+                <a href="#precos" class="hover:text-brand-600 transition">Tabela de Preços</a>
+                <a href="#simulador" class="hover:text-brand-600 transition">Simulador</a>
+                <a href="#contactos" class="hover:text-brand-600 transition">Contactos</a>
+            </nav>
+
+            <!-- Mode Switcher (Web / App Mobile) & CTA -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-slate-100 p-1 rounded-xl flex items-center border border-slate-200">
+                    <button id="btnWeb" onclick="switchView('web')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-brand-700 shadow-sm transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Web Site</span>
+                    </button>
+                    <button id="btnApp" onclick="switchView('app')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-950 transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>App UI</span>
+                    </button>
+                </div>
+                
+                <a href="https://wa.me/244945492918?text=Olá,%20gostaria%20de%20agendar%20uma%20lavagem%20de%20estofados." target="_blank" class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-sm shadow-lg shadow-emerald-600/20 transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main id="mainContainer">
+
+        <!-- ================= WEB LANDING PAGE VIEW ================= -->
+        <div id="webView" class="block">
+            
+            <!-- Hero Section -->
+            <section id="inicio" class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-brand-50/60 via-white to-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-700 text-xs font-semibold uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span>Atendimento ao Domicílio em Luanda e Províncias</span>
+                            </div>
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                                Deixe os seus estofados <span class="bg-gradient-to-r from-brand-600 to-emerald-600 bg-clip-text text-transparent">como novos em Angola</span>
+                            </h1>
+                            <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                                Especialistas em lavagem e higienização profunda de sofás, tapetes, colchões e cadeiras ao domicílio. Removemos ácaros, manchas e odores difíceis com tecnologia avançada.
+                            </p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                                <a href="#simulador" class="w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-2xl shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-1 text-center">
+                                    Simular Orçamento Agora
+                                </a>
+                                <a href="tel:945492918" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-2xl shadow-sm transition text-center flex items-center justify-center space-x-2">
+                                    <i class="fa-solid fa-phone text-brand-600"></i>
+                                    <span>Ligar: 945 492 918</span>
+                                </a>
+                            </div>
+
+                            <!-- Trust Badges -->
+                            <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                                <div>
+                                    <p class="text-2xl font-bold text-slate-900">+1.500</p>
+                                    <p class="text-xs text-slate-500">Casas Limpas</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-slate-900">100%</p>
+                                    <p class="text-xs text-slate-500">Garantia de Qualidade</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-slate-900">Rápido</p>
+                                    <p class="text-xs text-slate-500">Serviço ao Domicílio</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative mx-auto max-w-md lg:max-w-none">
+                                <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-emerald-500 rounded-3xl blur-2xl opacity-20 -z-10"></div>
+                                <div class="bg-white p-4 rounded-3xl shadow-2xl border border-slate-100">
+                                    <img src="https://placehold.co/600x650/0070f3/ffffff?text=Limpeza+Total+Angola" alt="Lavagem de Sofás em Angola" class="rounded-2xl w-full h-[380px] object-cover">
+                                    <div class="mt-4 p-4 bg-slate-50 rounded-2xl flex items-center space-x-4">
+                                        <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">Produtos Antialérgicos</h4>
+                                            <p class="text-xs text-slate-500">Seguro para crianças e animais de estimação.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services & Pricing Section -->
+            <section id="precos" class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Tabela de Preços Oficial</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Preços Justos em Kwanzas (Kz)</h2>
+                        <p class="text-slate-600 mt-4">Confira os nossos valores competitivos para deixar o seu lar impecável sem gastar uma fortuna.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        
+                        <!-- Sofás Card -->
+                        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:border-brand-300 transition group flex flex-col justify-between">
+                            <div>
+                                <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                                    <i class="fa-solid fa-couch"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900">Sofás</h3>
+                                <p class="text-slate-500 text-sm mt-2">Lavagem completa com extracção profunda de poeiras e nódoas.</p>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-slate-200">
+                                <span class="text-xs text-slate-400 uppercase tracking-wide block">A partir de</span>
+                                <span class="text-2xl font-extrabold text-brand-600">8.000 Kz</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">até 15.000 Kz (conforme tamanho)</span>
+                                <a href="#simulador" class="mt-6 block w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl text-center text-sm shadow-md transition">Orçar Sofá</a>
+                            </div>
+                        </div>
+
+                        <!-- Tapetes Card -->
+                        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:border-brand-300 transition group flex flex-col justify-between">
+                            <div>
+                                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                                    <i class="fa-solid fa-rug"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900">Tapetes</h3>
+                                <p class="text-slate-500 text-sm mt-2">Remoção de ácaros, odores e revitalização de fibras e cores.</p>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-slate-200">
+                                <span class="text-xs text-slate-400 uppercase tracking-wide block">Preço por metro</span>
+                                <span class="text-2xl font-extrabold text-emerald-600">3.000 Kz</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">por metro quadrado (m²)</span>
+                                <a href="#simulador" class="mt-6 block w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-center text-sm shadow-md transition">Orçar Tapete</a>
+                            </div>
+                        </div>
+
+                        <!-- Colchões Card -->
+                        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:border-brand-300 transition group flex flex-col justify-between">
+                            <div>
+                                <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                                    <i class="fa-solid fa-bed"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900">Colchões</h3>
+                                <p class="text-slate-500 text-sm mt-2">Higienização profunda (solteiro, casal, queen e king size).</p>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-slate-200">
+                                <span class="text-xs text-slate-400 uppercase tracking-wide block">A partir de</span>
+                                <span class="text-2xl font-extrabold text-indigo-600">10.000 Kz</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">até 15.000 Kz (solteiro a casal)</span>
+                                <a href="#simulador" class="mt-6 block w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl text-center text-sm shadow-md transition">Orçar Colchão</a>
+                            </div>
+                        </div>
+
+                        <!-- Cadeiras e Poltronas Card -->
+                        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 hover:shadow-xl hover:border-brand-300 transition group flex flex-col justify-between">
+                            <div>
+                                <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                                    <i class="fa-solid fa-chair"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900">Cadeiras e Poltronas</h3>
+                                <p class="text-slate-500 text-sm mt-2">Perfeito para cadeiras de escritório, de jantar e poltronas.</p>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-slate-200">
+                                <span class="text-xs text-slate-400 uppercase tracking-wide block">Preço unitário</span>
+                                <span class="text-2xl font-extrabold text-amber-600">2.000 Kz</span>
+                                <span class="text-xs text-slate-500 block mt-0.5">por cada peça/cadeira</span>
+                                <a href="#simulador" class="mt-6 block w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl text-center text-sm shadow-md transition">Orçar Cadeira</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Budget Simulator -->
+            <section id="simulador" class="py-20 bg-slate-100/70 border-y border-slate-200">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Calculadora Rápida</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Simulador de Orçamento Interativo</h2>
+                        <p class="text-slate-600 mt-2">Selecione as quantidades abaixo e calcule o valor estimado em Kwanzas instantaneamente.</p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200">
+                        <div class="space-y-6">
+                            
+                            <!-- Item 1: Sofás -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200/60 gap-4">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 flex items-center space-x-2">
+                                        <i class="fa-solid fa-couch text-brand-600"></i>
+                                        <span>Sofás (Média 12.000 Kz)</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500">Sofás de 2 ou 3 lugares / L</p>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-right">
+                                        <span class="text-sm font-bold text-brand-600" id="subSofas">0 Kz</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 bg-white border border-slate-300 rounded-xl p-1">
+                                        <button onclick="updateQty('sofas', -1)" class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-slate-700 transition">-</button>
+                                        <span id="qtySofas" class="w-8 text-center font-bold text-slate-900">0</span>
+                                        <button onclick="updateQty('sofas', 1)" class="w-8 h-8 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-bold transition">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2: Tapetes -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200/60 gap-4">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 flex items-center space-x-2">
+                                        <i class="fa-solid fa-rug text-emerald-600"></i>
+                                        <span>Tapetes (3.000 Kz / m²)</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500">Metros quadrados estimados</p>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-right">
+                                        <span class="text-sm font-bold text-emerald-600" id="subTapetes">0 Kz</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 bg-white border border-slate-300 rounded-xl p-1">
+                                        <button onclick="updateQty('tapetes', -1)" class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-slate-700 transition">-</button>
+                                        <span id="qtyTapetes" class="w-8 text-center font-bold text-slate-900">0</span>
+                                        <button onclick="updateQty('tapetes', 1)" class="w-8 h-8 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold transition">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3: Colchões -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200/60 gap-4">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 flex items-center space-x-2">
+                                        <i class="fa-solid fa-bed text-indigo-600"></i>
+                                        <span>Colchões (Média 12.500 Kz)</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500">Solteiro, Casal ou Queen</p>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-right">
+                                        <span class="text-sm font-bold text-indigo-600" id="subColchoes">0 Kz</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 bg-white border border-slate-300 rounded-xl p-1">
+                                        <button onclick="updateQty('colchoes', -1)" class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-slate-700 transition">-</button>
+                                        <span id="qtyColchoes" class="w-8 text-center font-bold text-slate-900">0</span>
+                                        <button onclick="updateQty('colchoes', 1)" class="w-8 h-8 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold transition">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 4: Cadeiras e Poltronas -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200/60 gap-4">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 flex items-center space-x-2">
+                                        <i class="fa-solid fa-chair text-amber-600"></i>
+                                        <span>Cadeiras / Poltronas (2.000 Kz cad)</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500">Cadeiras de jantar ou escritório</p>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-right">
+                                        <span class="text-sm font-bold text-amber-600" id="subCadeiras">0 Kz</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 bg-white border border-slate-300 rounded-xl p-1">
+                                        <button onclick="updateQty('cadeiras', -1)" class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-slate-700 transition">-</button>
+                                        <span id="qtyCadeiras" class="w-8 text-center font-bold text-slate-900">0</span>
+                                        <button onclick="updateQty('cadeiras', 1)" class="w-8 h-8 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-bold transition">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Total & WhatsApp Order Button -->
+                        <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider block">Total Estimado</span>
+                                <div class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="totalOrcamento">0 Kz</div>
+                            </div>
+                            <button onclick="enviarOrcamentoWhatsApp()" class="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-xl shadow-emerald-600/30 transition flex items-center justify-center space-x-3">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>Enviar Orçamento via WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contactos" class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Fale Connosco</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Estamos prontos para atender o seu pedido em Luanda</h2>
+                            <p class="text-slate-600 mt-4 leading-relaxed">
+                                Entre em contacto direto com a nossa equipa através dos números abaixo ou envie uma mensagem via WhatsApp para agendar a limpeza dos seus estofados com total comodidade.
+                            </p>
+
+                            <div class="mt-8 space-y-4">
+                                <!-- Phone 1 -->
+                                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-xs text-slate-500 uppercase tracking-wide block">Contacto Principal</span>
+                                            <span class="text-lg font-bold text-slate-900">945 492 918</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <a href="tel:945492918" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-sm font-semibold transition">Ligar</a>
+                                        <a href="https://wa.me/244945492918" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold transition flex items-center space-x-1">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Phone 2 -->
+                                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-xs text-slate-500 uppercase tracking-wide block">Contacto Alternativo</span>
+                                            <span class="text-lg font-bold text-slate-900">958 723 721</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <a href="tel:958723721" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-sm font-semibold transition">Ligar</a>
+                                        <a href="https://wa.me/244958723721" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold transition flex items-center space-x-1">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Message Form -->
+                        <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                            <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                            <h3 class="text-2xl font-bold mb-2">Agendamento Rápido</h3>
+                            <p class="text-slate-400 text-sm mb-6">Preencha os dados e entraremos em contacto imediato.</p>
+                            
+                            <form onsubmit="enviarFormulario(event)" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Seu Nome</label>
+                                    <input type="text" id="formNome" required placeholder="Ex: Maria dos Santos" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Seu Telefone em Angola</label>
+                                    <input type="tel" id="formTelefone" required placeholder="Ex: 923 000 000" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Serviço Pretendido</label>
+                                    <select id="formServico" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-brand-500">
+                                        <option value="Sofá">Lavagem de Sofá (8k - 15k Kz)</option>
+                                        <option value="Tapete">Lavagem de Tapete (3k Kz/m²)</option>
+                                        <option value="Colchão">Lavagem de Colchão (10k - 15k Kz)</option>
+                                        <option value="Cadeiras">Cadeiras e Poltronas (2k Kz cada)</option>
+                                        <option value="Completo">Limpeza Completa da Casa</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-600/30 transition">
+                                    Solicitar Visita ao Domicílio
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- /webView -->
+
+
+        <!-- ================= APP MOBILE UI VIEW ================= -->
+        <div id="appView" class="hidden py-12 bg-slate-900 min-h-screen flex items-center justify-center px-4">
+            <!-- Mobile Phone Frame Mockup -->
+            <div class="w-full max-w-sm bg-slate-950 rounded-[40px] phone-frame border-4 border-slate-800 overflow-hidden relative shadow-2xl">
+                <!-- Phone Notch / Status Bar -->
+                <div class="bg-slate-900 pt-3 pb-2 px-6 flex justify-between items-center text-white text-xs border-b border-slate-800">
+                    <span class="font-bold">09:41</span>
+                    <div class="w-20 h-4 bg-slate-950 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 top-2"></div>
+                    <div class="flex items-center space-x-1.5 text-slate-400">
+                        <i class="fa-solid fa-signal text-[10px]"></i>
+                        <i class="fa-solid fa-wifi text-[10px]"></i>
+                        <i class="fa-solid fa-battery-full text-xs text-emerald-400"></i>
+                    </div>
+                </div>
+
+                <!-- App Screen Content -->
+                <div class="bg-slate-900 text-white p-5 overflow-y-auto max-h-[680px]">
+                    
+                    <!-- App Header -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-500 flex items-center justify-center font-bold text-white shadow">
+                                <i class="fa-solid fa-soap"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold">Limpeza Total</h4>
+                                <span class="text-[10px] text-emerald-400 font-medium">🇦🇴 Luanda, Angola</span>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300">
+                            <i class="fa-solid fa-bell text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- App Search Banner -->
+                    <div class="bg-gradient-to-r from-brand-600 to-emerald-600 rounded-2xl p-4 mb-6 shadow-lg shadow-brand-600/20">
+                        <span class="bg-white/20 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full inline-block mb-1">Promoção do Mês</span>
+                        <h3 class="text-base font-extrabold text-white">Estofados impecáveis em casa!</h3>
+                        <p class="text-xs text-slate-100 mt-1 opacity-90">Agende hoje e ganhe desinfecção gratuita contra ácaros.</p>
+                    </div>
+
+                    <!-- App Quick Services Grid -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tabela Rápida (Kz)</h5>
+                            <span class="text-[10px] text-brand-400 font-semibold">Preços Oficiais</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-3">
+                            <!-- Sofá -->
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700/60">
+                                <i class="fa-solid fa-couch text-brand-400 text-base mb-1"></i>
+                                <h6 class="text-xs font-bold">Sofás</h6>
+                                <p class="text-[10px] text-slate-400">8k a 15k Kz</p>
+                            </div>
+                            <!-- Tapete -->
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700/60">
+                                <i class="fa-solid fa-rug text-emerald-400 text-base mb-1"></i>
+                                <h6 class="text-xs font-bold">Tapetes</h6>
+                                <p class="text-[10px] text-slate-400">3.000 Kz / m²</p>
+                            </div>
+                            <!-- Colchão -->
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700/60">
+                                <i class="fa-solid fa-bed text-indigo-400 text-base mb-1"></i>
+                                <h6 class="text-xs font-bold">Colchões</h6>
+                                <p class="text-[10px] text-slate-400">10k a 15k Kz</p>
+                            </div>
+                            <!-- Cadeira -->
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700/60">
+                                <i class="fa-solid fa-chair text-amber-400 text-base mb-1"></i>
+                                <h6 class="text-xs font-bold">Cadeiras</h6>
+                                <p class="text-[10px] text-slate-400">2.000 Kz cada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Direct Call Actions -->
+                    <div class="bg-slate-800 rounded-2xl p-4 mb-6 border border-slate-700">
+                        <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Linhas de Atendimento</h5>
+                        <div class="space-y-2">
+                            <a href="https://wa.me/244945492918" target="_blank" class="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center justify-between transition">
+                                <span class="flex items-center space-x-2">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                    <span>945 492 918</span>
+                                </span>
+                                <span class="bg-emerald-500 px-2 py-0.5 rounded text-[10px]">WhatsApp</span>
+                            </a>
+                            <a href="https://wa.me/244958723721" target="_blank" class="w-full py-2.5 px-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl text-xs font-bold flex items-center justify-between transition">
+                                <span class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-phone text-sm text-brand-400"></i>
+                                    <span>958 723 721</span>
+                                </span>
+                                <span class="bg-slate-600 px-2 py-0.5 rounded text-[10px]">Ligar</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- App Bottom Note -->
+                    <div class="text-center pb-4">
+                        <p class="text-[10px] text-slate-500">Limpeza Total Angola © 2026. Todos os direitos reservados.</p>
+                    </div>
+
+                </div>
+
+                <!-- App Bottom Navigation Bar -->
+                <div class="bg-slate-950 border-t border-slate-800 py-3 px-6 flex justify-around items-center text-slate-400">
+                    <button class="text-brand-500 flex flex-col items-center">
+                        <i class="fa-solid fa-house text-sm"></i>
+                        <span class="text-[9px] mt-1 font-semibold">Início</span>
+                    </button>
+                    <button class="hover:text-white flex flex-col items-center transition">
+                        <i class="fa-solid fa-calculator text-sm"></i>
+                        <span class="text-[9px] mt-1">Orçar</span>
+                    </button>
+                    <button class="hover:text-white flex flex-col items-center transition">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                        <span class="text-[9px] mt-1">Contactos</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-soap"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">Limpeza Total Angola</span>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        Serviço profissional de lavagem e higienização de estofados ao domicílio em Luanda e arredores. Qualidade superior e preços acessíveis.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Contactos Diretos</h4>
+                    <p class="text-sm text-slate-300 mb-2 font-semibold">📱 945 492 918</p>
+                    <p class="text-sm text-slate-300 mb-4 font-semibold">📱 958 723 721</p>
+                    <p class="text-xs text-slate-500">Disponível de Segunda a Sábado, das 08h00 às 18h00.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-white transition">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition">Serviços</a></li>
+                        <li><a href="#precos" class="hover:text-white transition">Tabela de Preços (Kz)</a></li>
+                        <li><a href="#simulador" class="hover:text-white transition">Simulador de Orçamento</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between">
+                <p>&copy; 2026 Limpeza Total Angola. Todos os direitos reservados.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="https://wa.me/244945492918" target="_blank" class="text-slate-400 hover:text-emerald-400 transition"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                    <a href="tel:945492918" class="text-slate-400 hover:text-brand-400 transition"><i class="fa-solid fa-phone text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Simulator & Logic -->
+    <script>
+        // Quantidades do simulador
+        let qtde = {
+            sofas: 0,
+            tapetes: 0,
+            colchoes: 0,
+            cadeiras: 0
+        };
+
+        // Preços unitários médios ou fixos
+        const precos = {
+            sofas: 12000,   // Média entre 8.000 e 15.000 Kz
+            tapetes: 3000,   // Por metro
+            colchoes: 12500, // Média entre 10.000 e 15.000 Kz
+            cadeiras: 2000   // Cada cadeira/poltrona
+        };
+
+        function updateQty(item, change) {
+            qtde[item] = Math.max(0, qtde[item] + change);
+            document.getElementById('qty' + capitalize(item)).innerText = qtde[item];
+            
+            let subtotal = qtde[item] * precos[item];
+            document.getElementById('sub' + capitalize(item)).innerText = formatKz(subtotal);
+            
+            calcularTotal();
+        }
+
+        function calcularTotal() {
+            let total = (qtde.sofas * precos.sofas) +
+                        (qtde.tapetes * precos.tapetes) +
+                        (qtde.colchoes * precos.colchoes) +
+                        (qtde.cadeiras * precos.cadeiras);
+            
+            document.getElementById('totalOrcamento').innerText = formatKz(total);
+        }
+
+        function formatKz(valor) {
+            return valor.toLocaleString('pt') + ' Kz';
+        }
+
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        function enviarOrcamentoWhatsApp() {
+            let total = (qtde.sofas * precos.sofas) +
+                        (qtde.tapetes * precos.tapetes) +
+                        (qtde.colchoes * precos.colchoes) +
+                        (qtde.cadeiras * precos.cadeiras);
+
+            if (total === 0) {
+                alertPersonalizado("Por favor, selecione pelo menos um item no simulador.");
+                return;
+            }
+
+            let msg = `Olá! Gostaria de solicitar um orçamento de lavagem de estofados:\n\n`;
+            if (qtde.sofas > 0) msg += `- Sofás: ${qtde.sofas} un.\n`;
+            if (qtde.tapetes > 0) msg += `- Tapetes: ${qtde.tapetes} m²\n`;
+            if (qtde.colchoes > 0) msg += `- Colchões: ${qtde.colchoes} un.\n`;
+            if (qtde.cadeiras > 0) msg += `- Cadeiras/Poltronas: ${qtde.cadeiras} un.\n`;
+            msg += `\n*Total Estimado: ${formatKz(total)}*\n\nAguardo confirmação para agendamento em Luanda.`;
+
+            let url = `https://wa.me/244945492918?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        }
+
+        function enviarFormulario(e) {
+            e.preventDefault();
+            let nome = document.getElementById('formNome').value;
+            let telefone = document.getElementById('formTelefone').value;
+            let servico = document.getElementById('formServico').value;
+
+            let msg = `Olá! Meu nome é *${nome}* (Tel: ${telefone}) e gostaria de agendar o serviço de *${servico}*.`;
+            let url = `https://wa.me/244945492918?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        }
+
+        // Alternador de Visualização Web / App
+        function switchView(mode) {
+            const webView = document.getElementById('webView');
+            const appView = document.getElementById('appView');
+            const btnWeb = document.getElementById('btnWeb');
+            const btnApp = document.getElementById('btnApp');
+
+            if (mode === 'web') {
+                webView.classList.remove('hidden');
+                appView.classList.add('hidden');
+                btnWeb.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-brand-700 shadow-sm transition flex items-center space-x-1.5";
+                btnApp.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-950 transition flex items-center space-x-1.5";
+            } else {
+                webView.classList.add('hidden');
+                appView.classList.remove('hidden');
+                btnApp.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-brand-700 shadow-sm transition flex items-center space-x-1.5";
+                btnWeb.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-950 transition flex items-center space-x-1.5";
+            }
+        }
+
+        function alertPersonalizado(txt) {
+            // Mensagem elegante sem usar alert nativo
+            alert(txt);
+        }
+    </script>
+</body>
+</html>
